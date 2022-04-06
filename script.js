@@ -10,18 +10,41 @@ const handleSubmit = (event) => {
     newListItem.className = "list-group-item";
     newListItem.innerHTML = ` ${inputValue}`;
     list.append(newListItem);
-    const newListInput = document.createElement('input')
+    const newListInput = document.createElement('input');
     newListInput.className = "form-check-input me-1";
     newListInput.type = "checkbox";
     newListInput.value ="";
     newListInput.ariaLabel = "...";
     newListItem.prepend(newListInput);
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'Delete';
+    deleteButton.className = "delete";
+    newListItem.append(deleteButton);
 
+    //const deleteButton = document.querySelector('.delete');
 
+    const handleDelete = (event) => {
+
+        newListItem.remove();
+
+    };
+  
+    deleteButton.addEventListener('click', handleDelete);
+    
   };
 
   form.addEventListener("submit", handleSubmit);
 
-  
-  //Section:
+
+  //Section: delete button effects
+
+const deleteButton = document.querySelector('.delete');
+
+  const handleDelete = (event) => {
+    deleteButton.innerText = "I was clicked!"
+    event.target.innerHTML = "The event target was clicked!"
+  };
+
+  //deleteButton.addEventListener('click', handleDelete);
+  //deleteButton.innerHTML = handleDelete;
 
