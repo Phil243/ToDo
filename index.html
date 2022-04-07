@@ -50,28 +50,8 @@
                 <div>
                     <ul id="todo-list" class="list-group">
                         <lh class="text-center">
-                            <h4>27.04.2363</h3>
+                            <h3 class="heading-date"></h3>
                         </lh>
-                        <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        First checkbox
-                        </li>
-                        <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Second checkbox
-                        </li>
-                        <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Third checkbox
-                        </li>
-                        <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Fourth checkbox
-                        </li>
-                        <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Fifth checkbox
-                        </li>
                     </ul>
                 </div>
           </div>
@@ -91,7 +71,13 @@
                   <input type="text" id="todo-input">
                   <input type="submit">
                   <br>
-                  <input type="text">
+                  <!-- <input type="text"> -->
+
+                  <!-- Datepicker -->
+                  <input type="date" id="start" name="trip-start"
+       value="2022-04-06"
+       min="2022-04-06" max="2100-12-31">
+
                   <div class="form-check form-switch">
                     <input class="wictig form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Wichtig</label>
