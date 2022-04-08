@@ -1,0 +1,10 @@
+.bi-trash3-fill{
+ /* justify-content: right; */
+    margin-right: 50px !important;
+    color:rgb(196, 4, 4) !important;
+    background-color: rgb(216, 216, 216) !important;
+    border: solid white 1px;
+    border-radius:  50%;
+
+}
+
