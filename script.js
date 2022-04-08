@@ -7,6 +7,7 @@ const handleSubmit = (event) => {
     const date = document.querySelector('#start').value;
     const privat = document.querySelector('privat');
     const inputValue = document.getElementById("todo-input").value;
+    const deleteValue = document.getElementById("todo-input").value="";
     const newListItem = document.createElement("li");
     newListItem.className = "list-group-item";
     newListItem.innerHTML = ` ${inputValue}, ${date}`;
@@ -22,19 +23,12 @@ const handleSubmit = (event) => {
     const editButton = document.createElement('editbutton')
     const deleteButton = document.createElement('button');
     //deleteButton.innerHTML = '< id="trash" class="bi bi-trash3-fill"></i>';
-    editButton.className = "bi bi-pencil-fill"
+    
     deleteButton.className = " bi bi-trash3-fill muell" ;
     //deleteButton.style.color = "red"; 
-    newListItem.append(editButton);
+    
     newListItem.append(deleteButton);
 
-    //const editButton 
-const handleEdit = (event) => {
-  newListItem.edit();
-}
-
-
-    editButton.addEventListener('click', handleEdit)
   //const deleteButton = document.querySelector('.delete');
     const handleDelete = (event) => {
 
@@ -47,6 +41,10 @@ const handleEdit = (event) => {
   };
 
   form.addEventListener("submit", handleSubmit);
+  
+
+ 
+
 
 
 
