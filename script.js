@@ -15,6 +15,7 @@ const handleSubmit = (event) => {
     newListInput.className = "form-check-input me-1";
     newListInput.type = "checkbox";
     newListInput.value ="";
+    
     //newListInput.ariaLabel = "...";
 
     newListItem.prepend(newListInput);
@@ -76,4 +77,3 @@ const deleteButton = document.querySelector('.delete');
   //Section:
 
   
-
