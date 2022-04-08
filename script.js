@@ -9,13 +9,14 @@ const handleSubmit = (event) => {
     const inputValue = document.getElementById("todo-input").value;
     const deleteValue = document.getElementById("todo-input").value="";
     const newListItem = document.createElement("li");
-    newListItem.className = "list-group-item";
+    newListItem.className = "d-flex list-group-item justify-content-between align-items-center";
     newListItem.innerHTML = ` ${inputValue}, ${date}`;
     list.append(newListItem);
     const newListInput = document.createElement('input');
     newListInput.className = "form-check-input me-1";
     newListInput.type = "checkbox";
     newListInput.value ="";
+    
     //newListInput.ariaLabel = "...";
 
     newListItem.prepend(newListInput);
@@ -74,4 +75,3 @@ const deleteButton = document.querySelector('.delete');
   //Section:
 
   
-

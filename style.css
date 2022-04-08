@@ -5,6 +5,8 @@
     background-color: rgb(180, 0, 0) !important;
     border: solid white 1px;
     border-radius: 50%;
+    height: 100%;
+    
 
 }
 
@@ -16,3 +18,16 @@
     margin: 0 20px;
 }
 
+.knopf{
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(67, 71, 150);
+    border: rgb(255, 255, 255);
+}
+.icon{
+    margin: 5px;
+}
+list-group-item{
+    display:flex;
+    justify-content: space-between;
+}
