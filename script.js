@@ -4,7 +4,8 @@ const list = document.getElementById("todo-list");
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    const date = document.querySelector('#start').value
+    const date = document.querySelector('#start').value;
+    const privat = document.querySelector('privat');
     const inputValue = document.getElementById("todo-input").value;
     const newListItem = document.createElement("li");
     newListItem.className = "list-group-item";
@@ -14,16 +15,26 @@ const handleSubmit = (event) => {
     newListInput.className = "form-check-input me-1";
     newListInput.type = "checkbox";
     newListInput.value ="";
-    newListInput.ariaLabel = "...";
+    //newListInput.ariaLabel = "...";
 
     newListItem.prepend(newListInput);
+    const editButton = document.createElement('editbutton')
     const deleteButton = document.createElement('button');
-    deleteButton.innerHTML = 'Delete';
-    deleteButton.className = "delete";
+    //deleteButton.innerHTML = '< id="trash" class="bi bi-trash3-fill"></i>';
+    editButton.className = "bi bi-pencil-fill"
+    deleteButton.className = " bi bi-trash3-fill muell" ;
+    //deleteButton.style.color = "red"; 
+    newListItem.append(editButton);
     newListItem.append(deleteButton);
 
-    //const deleteButton = document.querySelector('.delete');
+    //const editButton 
+const handleEdit = (event) => {
+  newListItem.edit();
+}
 
+
+    editButton.addEventListener('click', handleEdit)
+  //const deleteButton = document.querySelector('.delete');
     const handleDelete = (event) => {
 
         newListItem.remove();
@@ -64,4 +75,5 @@ const deleteButton = document.querySelector('.delete');
   
   //Section:
 
+  
 
