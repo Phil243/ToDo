@@ -25,9 +25,45 @@ const handleSubmit = (event) => {
     //deleteButton.innerHTML = '< id="trash" class="bi bi-trash3-fill"></i>';
     
     deleteButton.className = " bi bi-trash3-fill muell" ;
+    editButton.className = " bi bi-trash3-fill muell" ;
     //deleteButton.style.color = "red"; 
     
+
+    newListItem.append(editButton);
     newListItem.append(deleteButton);
+
+  //handle edit
+  const editItem = (event) => {
+    console.log('Handle edit is working');
+
+    let item = event.target.innerHTML;
+    let itemInput = document.createElement('input');
+    itemInput.type = 'text';
+    itemInput.value = item;
+    itemInput.classList.add('edit');
+    itemInput.addEventListener('keypress', saveItem);
+    itemInput.addEventListener('click', saveItem);
+    event.target.parentNode.prepend(itemInput);
+    event.target.remove();
+    itemInput.select();
+
+
+function saveItem(event) {
+  let inputValue = event.target.value;
+  if (event.target.value.length > 0 && (event.keyCode === 13 || event.type === 'click')) {
+  let li = document.createElement('li');
+  //li.addEventListener('click', toggleDone);
+  //li.addEventListener('dblclick', editItem);
+  li.textContent = event.target.value;
+  event.target.parentNode.prepend(li);
+  event.target.remove();
+  }
+  }
+   };
+
+
+
+    editButton.addEventListener('click', editItem);
 
   //const deleteButton = document.querySelector('.delete');
     const handleDelete = (event) => {
@@ -37,7 +73,7 @@ const handleSubmit = (event) => {
     };
   
     deleteButton.addEventListener('click', handleDelete);
-    
+
   };
 
   form.addEventListener("submit", handleSubmit);
