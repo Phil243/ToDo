@@ -2,12 +2,14 @@ window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
+	const date = document.querySelector("#start");
+	
+
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
-
-		const task = input.value;
-
+		
+		const task = input.value + ' ' + date.value;
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
 
@@ -27,13 +29,23 @@ window.addEventListener('load', () => {
 		const task_actions_el = document.createElement('div');
 		task_actions_el.classList.add('actions');
 		
+		//const task_date_el= document.createElement ('date')
+		//task_date_el.className='date';
+		//task_date_el.type = 'date';
+		//task_date_el.value = date;
+		//task_date_el.addEventListener ('date', )
+		//console.log('date')
+		//task_edit_el.className = 'bi-emoji-laughing-fill'
+
 		const task_edit_el = document.createElement('button');
 		task_edit_el.classList.add('edit');
 		task_edit_el.innerText = 'Edit';
+		task_edit_el.className = 'bi-emoji-laughing-fill'
 
 		const task_delete_el = document.createElement('button');
 		task_delete_el.classList.add('delete');
-		task_delete_el.innerText = 'Delete';
+		task_delete_el.innerText = '';
+		task_delete_el.className = 'bi bi-trash3-fill'
 
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);

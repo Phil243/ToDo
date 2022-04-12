@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,12 @@
 				name="new-task-input" 
 				id="new-task-input" 
 				placeholder="Please add a To-Do" />
+				<input type="date" 
+				id="start" 
+				placeholder="dd-mm-yyyy"
+				value=""
+				  >
+				
 			<input 
 				type="submit"
 				id="new-task-submit" 
@@ -27,7 +33,7 @@
 	</header>
 	<main>
 		<section class="task-list">
-			<h2>To-Do`s</h2>
+			<h2><i class="bi bi-emoji-dizzy-fill"></i>To-Do`s<i class="bi bi-emoji-dizzy-fill"></i></h2>
 
 			<div id="tasks">
 
@@ -48,7 +54,7 @@
 			</div>
 		</section>
 	</main>
-
+	
 	<script src="main.js"></script>
 </body>
 </html>
