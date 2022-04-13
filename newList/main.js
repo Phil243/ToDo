@@ -1,17 +1,18 @@
 window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
-	const input = document.querySelector("#new-task-input");
+	let input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
 	const date = document.querySelector("#start");
-	
+	const savedTasks = localStorage.getItem('#tasks');
 
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
-		
+		//const savedTasks = localStorage.getItem('task');
 		const task = input.value + ' ' + date.value;
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
+		//const savedTasks = localStorage.getItem('tasks')
 
 		const task_content_el = document.createElement('div');
 		task_content_el.classList.add('content');
@@ -28,7 +29,7 @@ window.addEventListener('load', () => {
 
 		const task_actions_el = document.createElement('div');
 		task_actions_el.classList.add('actions');
-		
+		//localStorage.setItem("tasks", JSON.stringify(savedTasks));
 		//const task_date_el= document.createElement ('date')
 		//task_date_el.className='date';
 		//task_date_el.type = 'date';
@@ -55,7 +56,7 @@ window.addEventListener('load', () => {
 		list_el.appendChild(task_el);
 
 		input.value = '';
-
+		localStorage.setItem("tasks", JSON.stringify(savedTasks));	
 		task_edit_el.addEventListener('click', (e) => {
 			if (task_edit_el.innerText.toLowerCase() == "edit") {
 				task_edit_el.innerText = "Save";
@@ -69,6 +70,10 @@ window.addEventListener('load', () => {
 
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
+			
 		});
 	});
 });
+
+let savedTasks = JSON.parse(localStorage.getItem("tasks"));
+

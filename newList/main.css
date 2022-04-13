@@ -41,18 +41,18 @@ header {
 }
 
 header h1{ 
-	/* font-size: 2.5rem;
+	font-size: 2.5rem;
 	font-weight: 300;
 	color: var(--light);
-	margin-bottom: 1rem; */
-	color: var(--pink);
+	margin-bottom: 1rem;
+	/* color: var(--pink);
 	font-size: 2.5rem;
 	font-weight: 700;
 	background-image: linear-gradient(to bottom, var(--yellow), var(--ocean));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
-	transition: 0.4s;
+	transition: 0.4s; */
 }
 
 #new-task-form {
@@ -126,8 +126,8 @@ main {
 .task-list h2 {
 	font-size: 1.5rem;
 	font-weight: 300;
-	/* color: var(--light); */
-	margin-bottom: 1rem;
+	color: var(--light); 
+	/* margin-bottom: 1rem;
 	color: var(--pink);
 	font-size: 2.5rem;
 	font-weight: 700;
@@ -135,7 +135,7 @@ main {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
-	transition: 0.4s;
+	transition: 0.4s; */
 }
 
 #tasks .task {
@@ -153,17 +153,17 @@ main {
 
 .task .content .text {
 	color: var(--blue);
-	/* font-size: 1.125rem;
+	font-size: 1.125rem;
 	width: 100%;
 	display: block;
-	transition: 0.4s; */
-	font-size: 1.25rem;
+	transition: 0.4s;
+	/* font-size: 1.25rem;
 	font-weight: 700;
 	background-image: linear-gradient(to right, var(--yellow), var(--purple));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
-	transition: 0.4s;
+	transition: 0.4s; */
 }
 
 .task .content .text:not(:read-only) {
